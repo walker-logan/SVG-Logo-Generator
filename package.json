@@ -23,5 +23,8 @@
   "homepage": "https://github.com/walker-logan/SVG-Logo-Generator#readme",
   "dependencies": {
     "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
