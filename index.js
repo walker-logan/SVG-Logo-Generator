@@ -10,3 +10,22 @@ const buildSVG = (shape, color, text) => `
   </g>
 </svg>
 `;
+
+const writeToFile = (fileName, svgString) => {
+  fs.writeFile(fileName, svgString, (err) => {
+    err ? console.log(err) : console.log("#######");
+  });
+};
+
+const promptUser = () => 
+inquirer.prompt([
+  {
+    type: "input",
+    message:
+    "Enter up to three characters you want your logo to be.",
+    name: "text",
+  },
+  {
+    
+  }
+])
