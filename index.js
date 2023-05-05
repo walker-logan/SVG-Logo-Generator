@@ -43,6 +43,11 @@ inquirer.prompt([
     "Enter the desired color of the shape (color keyword or hexadecimal number).",
     name: "shapeBackground",
   }
-])
+]);
 
-const handleAnswers = (answers) => {}
+const handleAnswers = (answers) => {
+  if (answers.text.length > 3) {
+    console.log("Please enter a value of no more than 3 characters!");
+    promptUser().then(handleAnswers);
+  }
+}
