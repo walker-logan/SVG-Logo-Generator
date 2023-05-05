@@ -43,5 +43,6 @@ inquirer.prompt([
     "Enter the desired color of the shape (color keyword or hexadecimal number).",
     name: "shapeBackground",
   }
-
 ])
+
+const handleAnswers = (answers) => {}
