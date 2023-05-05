@@ -26,6 +26,22 @@ inquirer.prompt([
     name: "text",
   },
   {
-    
+    type: "input",
+    message:
+    "Enter the desired color of the text (color keyword or hexadecimal number).",
+    name: "textColor",
+  },
+  {
+    type: "list",
+    message:
+    "What shape do you want it?",
+    name: "shape",
+  },
+  {
+    type: "input",
+    message:
+    "Enter the desired color of the shape (color keyword or hexadecimal number).",
+    name: "shapeBackground",
   }
+
 ])
