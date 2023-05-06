@@ -1,9 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { Triangle, Square, Circle } = require("/lib/shapes.js");
+const { Triangle, Square, Circle } = require("./lib/shapes.js");
 
 // function to build the svc string
-const buildSVG = (shape, color, text) => `
+const buildSVG = (shape, color, text, textColor) => `
 <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <g>
     ${shape.render()}
@@ -12,15 +12,16 @@ const buildSVG = (shape, color, text) => `
 </svg>
 `;
 
+
 // function to create the appropriate shape based on user input using switch case. learned this from stack overflow. the way i understand it is a switch statement allows you to do different things based on the value of a specific variable. kinda like if else but more useful when theres many cases to handle.
 const createShape = (shapeType, shapeColor) => {
   switch (shapeType) {
     case "triangle":
-      return new Triangle(shapeColor);
+      return Triangle(shapeColor);
     case "square":
-      return new Square(shapeColor);
+      return Square(shapeColor);
     case "circle":
-      return new Circle(shapeColor);
+      return Circle(shapeColor);
     default:
       throw new Error("Invalid shape type");
   }
@@ -48,8 +49,9 @@ const promptUser = () =>
     },
     {
       type: "list",
-      message: "What shape do you want it?",
+      message: "What shape do you want?",
       name: "shape",
+      choices: ["triangle", "square", "circle"],
     },
     {
       type: "input",
@@ -66,8 +68,10 @@ const handleAnswers = (answers) => {
     console.log("Please enter a value of no more than 3 characters!");
     promptUser().then(handleAnswers);
   } else {
+    const shape = createShape(answers.shape, answers.shapeBackground);
+    const svgString = buildSVG(shape, answers.shapeBackground, answers.text, answers.textColor);
     // calling write file function to actually generate the svg
-    writeToFile("logo.svg", answers);
+    writeToFile("logo.svg", svgString);
   }
 };
 
