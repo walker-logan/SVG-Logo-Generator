@@ -17,11 +17,11 @@ const buildSVG = (shape, color, text, textColor) => `
 const createShape = (shapeType, shapeColor) => {
   switch (shapeType) {
     case "triangle":
-      return Triangle(shapeColor);
+      return new Triangle(shapeColor);
     case "square":
-      return Square(shapeColor);
+      return new Square(shapeColor);
     case "circle":
-      return Circle(shapeColor);
+      return new Circle(shapeColor);
     default:
       throw new Error("Invalid shape type");
   }
@@ -68,7 +68,7 @@ const handleAnswers = (answers) => {
     console.log("Please enter a value of no more than 3 characters!");
     promptUser().then(handleAnswers);
   } else {
-    const shape = createShape(answers.shape, answers.shapeColor);
+    const shape = createShape(answers.shape, answers.shapeBackground);
     const svgString = buildSVG(shape, answers.shapeBackground, answers.text, answers.textColor);
     // calling write file function to actually generate the svg
     writeToFile("logo.svg", svgString);
