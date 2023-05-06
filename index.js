@@ -29,7 +29,7 @@ const createShape = (shapeType, shapeColor) => {
 
 const writeToFile = (fileName, svgString) => {
   fs.writeFile(fileName, svgString, (err) => {
-    err ? console.log(err) : console.log("#######");
+    err ? console.log(err) : console.log("Your SVG has been generated! It is in the root directory labeled as logo.svg");
   });
 };
 
@@ -68,7 +68,7 @@ const handleAnswers = (answers) => {
     console.log("Please enter a value of no more than 3 characters!");
     promptUser().then(handleAnswers);
   } else {
-    const shape = createShape(answers.shape, answers.shapeBackground);
+    const shape = createShape(answers.shape, answers.shapeColor);
     const svgString = buildSVG(shape, answers.shapeBackground, answers.text, answers.textColor);
     // calling write file function to actually generate the svg
     writeToFile("logo.svg", svgString);
