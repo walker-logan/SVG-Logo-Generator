@@ -7,7 +7,7 @@ const buildSVG = (shape, color, text, textColor) => `
 <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <g>
     ${shape.render()}
-    <text x="130" y="110" text-anchor="middle" font-size="40" fill="${textColor}">${text}</text>
+    <text x="150" y="130" text-anchor="middle" font-size="40" fill="${textColor}">${text}</text>
   </g>
 </svg>
 `;
