@@ -28,7 +28,7 @@ MIT
 
 ### Demo
 
-![Demo](https://drive.google.com/file/d/12yfNOdLP6lLeWRorpWqvA1ZLwNHdbMJi/view)
+Check out the live demo [here!](https://drive.google.com/file/d/12yfNOdLP6lLeWRorpWqvA1ZLwNHdbMJi/view)
 
 ## Installation
 
