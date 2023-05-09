@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Description](#project-description)
+- [Examples](#examples)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contribution](#contribution)
@@ -12,6 +13,12 @@
 ## Project Description
 
 This application allows freelance web developers to generate basic logos, streamlining the design process. Users are prompted for logo specifications, and an SVG file is created based on their input. The project demonstrates back-end development potential without a UI, showcases a first implementation of unit testing, and reflects a growing developer mindset by incorporating basic error handling.
+
+## Examples
+
+![shape3](https://github.com/walker-logan/SVG-Logo-Generator/assets/123511233/99615148-24c3-4681-b765-1c842bf6a4a0)
+![shape2](https://github.com/walker-logan/SVG-Logo-Generator/assets/123511233/de6ad3c9-e7e6-49dc-87e4-7f94309b171c)
+![shape1](https://github.com/walker-logan/SVG-Logo-Generator/assets/123511233/ad970511-dca4-4f1a-80af-76bf2c1f2ec8)
 
 ### Licensing
 
